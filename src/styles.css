@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: var(--ptc);
+        font-size: 1.1rem;
+        line-height:1.5;
+}
+
+* ::selection {
+    cursor:pointer;
+    background-color: var(--pac);
+}
+
+:root {
+    /* Colors */
+    --ptc: #1a1a1a;
+    --itc: #e3e1ec;
+    --pbgc: #e5e7f0;
+    --pc: #fcfcfc;
+    --pac: #8b9ef3;
+    --sbgc: #cbc4d6;
+    --sc: #beafd8;
+    --sac: #9571ce;
+    --sach: #825ebd;
+    --pshdc: #cac6ce;
+    /* CSS Appearance */
+    --stdshad: 1px 1px 5px var(--pshdc);
+    /* Sizing */
+    --brdr: 12px; 
+    --spd: 8px;
+    --mpd: 32px;
+    --sis: 40px;
+    --xftnts: 2rem;
+}
+
+html {
+    background-color: var(--pbgc);
+}
+
+p {
+
+}
+
+.grid {
+    display: grid;
+}
+
+.c-invert {
+    filter:invert(1);
+}
+
+.xfnt {
+    font-weight: bold;
+    font-size:var(--xftnts);
+}
+
+.clickable {
+    cursor:pointer;
+}
+
+.clickable:hover {
+    filter:brightness(1.05);
+}
+
+.clickable:active {
+    filter:brightness(.95);
+    transform:scale(.98);
+}
+
+.main-container {
+    height: 100vh;
+    grid-template-columns: minmax(300px, 1fr) minmax(800px, 7fr);
+}
+
+.nav-wrapper {
+    padding: var(--mpd);
+    background-color: var(--sac);
+    grid-column: 1;
+}
+
+.nav-item {
+    padding: var(--spd);
+    border-radius: var(--brdr);
+    background-color: var(--sac);
+}
+
+.nav-item > * {
+display: inline-block;
+vertical-align: middle;
+user-select: none;
+}
+
+.nav-icon {
+    width: var(--sis);
+    margin-right: var(--mpd);
+}
+
+.nav-title {
+    width: calc(100% - (var(--sis) + var(--mpd)));
+    text-align: left;
+}
+
+.content-wrapper {
+    background-color: var();
+}
+
+.card {
+    width: fit-content;
+    background-color: var(--pc);
+    border-radius: var(--brdr);
+    padding: var(--spd);
+    box-shadow: var(--stdshad);
+}
+
