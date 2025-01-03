@@ -27,6 +27,10 @@
     --sac: #9571ce;
     --sach: #825ebd;
     --pshdc: #cac6ce;
+    --phighc: #a675f3;
+    --pmodc: #d989ec;
+    --plowc: #f0b3e1;
+    --delete: #e28080;
     /* CSS Appearance */
     --stdshad: 1px 1px 5px var(--pshdc);
     /* Sizing */
@@ -36,6 +40,7 @@
     --lpd: 64px;
     --sis: 40px;
     --xftnts: 2rem;
+    --pbrdr: 8px;
 }
 
 html {
@@ -73,6 +78,10 @@ h3 {
     border-bottom: 2px solid var(--pbgc)
 }
 
+h4 {
+    font-size:1.4rem;
+}
+
 .grid {
     display: grid;
 }
@@ -106,6 +115,7 @@ h3 {
 
 .clickable {
     cursor:pointer;
+    user-select: none;
 }
 
 .clickable:hover {
@@ -123,11 +133,26 @@ h3 {
 }
 
 .card {
+    min-height:fit-content;
+    max-height:fit-content;
     width: 100%;
     background-color: var(--pc);
     border-radius: var(--brdr);
     padding: var(--spd);
     box-shadow: var(--stdshad);
+    overflow-y:hidden;
+}
+
+.edit {
+    margin-right: var(--spd);
+}
+
+.edit:active {
+    background-color: var(--pac);
+}
+
+.delete:active {
+    background-color: var(--delete);
 }
 
 .clickable.card {
@@ -135,11 +160,12 @@ h3 {
 }
 
 .main-container {
-    height: 100vh;
+    min-height:500px;
     grid-template-columns: minmax(300px, 1fr) minmax(800px, 7fr);
 }
 
 .nav-wrapper {
+    height:100%;
     padding:var(--mpd);
     background-color: var(--sac);
     grid-column: 1;
@@ -151,6 +177,7 @@ div.nav-main {
     background-color: var(--pc);
     border-bottom: 5px solid var(--sach);
     margin-bottom: var(--lpd);
+    user-select: none;
 }
 
 .nav-item {
@@ -171,15 +198,24 @@ div.nav-main {
     margin-right: var(--mpd);
 }
 
+.task-icon {
+    padding: 4px;
+    width:var(--sis);
+    filter:invert(0.2);
+    border-radius: var(--brdr);
+    border: 2px solid var(--ptc);
+}
+
 .nav-title {
     width: calc(100% - (var(--sis) + var(--mpd)));
     text-align: left;
 }
 
 .content-wrapper {
+    height:100vh;
     padding: var(--spd);
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 150px minmax(300px, 80vh);
     gap:var(--spd);
     justify-items: stretch;
 }
@@ -191,4 +227,51 @@ div.nav-main {
     gap:var(--spd);
 }
 
+.task-container {
+    background-color: var(--pbgc);
+    max-height:80%;
+    margin-top: var(--spd);
+    flex-direction: column;
+    gap: var(--spd);
+    overflow-y:scroll;
+}
 
+.task-container::-webkit-scrollbar {
+    width:6px;
+}
+
+.task-container::-webkit-scrollbar-thumb {
+    background-color: var(--sach);
+    border-radius: var(--brdr);
+}
+
+.task-container::-webkit-scrollbar-track {
+    background-color: var(--pc);
+}
+
+.task-options {
+    margin-top: var(--spd);
+}
+
+.hover-box {
+    transition: all 0.3s;
+    transform-origin:center center;
+    box-shadow: 0 0px 0px rgba(0,0,0,0);
+}
+
+.hover-box:hover {
+    transform:scale(1, 1.02) translate(-5px, -5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.phigh {
+    border-left: var(--pbrdr) solid var(--phighc);
+}
+
+.pmod {
+    border-left: var(--pbrdr) solid var(--pmodc);
+}
+
+.plow {
+    border-left: var(--pbrdr) solid var(--plowc);
+}
