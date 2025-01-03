@@ -39,6 +39,7 @@
     --mpd: 32px;
     --lpd: 64px;
     --sis: 40px;
+    --sftnts: 1.3rem;
     --xftnts: 2rem;
     --pbrdr: 8px;
 }
@@ -82,8 +83,32 @@ h4 {
     font-size:1.4rem;
 }
 
-input[type="text"] {
-    
+label {
+    display: block;
+    font-size: var(--sftnts);
+}
+
+input {
+    margin-right:var(--spd)
+}
+
+input[type="text"], input[type="date"] {
+    padding: var(--spd);
+    border-radius: var(--brdr);
+    border: 1px solid var(--itc);
+}
+
+input[type="text"]:focus {
+    filter: brightness(.98);
+    border: 1px solid black;
+}
+
+form {
+    text-wrap: nowrap;
+}
+
+form > * {
+    display: inline-block;
 }
 
 .grid {
