@@ -82,6 +82,10 @@ h4 {
     font-size:1.4rem;
 }
 
+input[type="text"] {
+    
+}
+
 .grid {
     display: grid;
 }
@@ -96,6 +100,10 @@ h4 {
 
 .c-invert {
     filter:invert(1);
+}
+
+.hidden {
+    display: none;
 }
 
 .xfnt {
@@ -133,14 +141,27 @@ h4 {
 }
 
 .card {
-    min-height:fit-content;
-    max-height:fit-content;
+    min-height:150px;
+    max-height:100%;
     width: 100%;
     background-color: var(--pc);
     border-radius: var(--brdr);
     padding: var(--spd);
     box-shadow: var(--stdshad);
     overflow-y:hidden;
+}
+
+.task.card {
+    min-height:fit-content;
+}
+
+.buttonDiv {
+    border-radius: var(--brdr);
+    margin: var(--mpd) var(--spd) var(--spd);
+    text-align: center;
+    width: 150px;
+    background-color: var(--pc);
+    border-bottom: 3px solid var(--sach);
 }
 
 .edit {
@@ -160,12 +181,12 @@ h4 {
 }
 
 .main-container {
-    min-height:500px;
+    min-height:fit-content;
     grid-template-columns: minmax(300px, 1fr) minmax(800px, 7fr);
 }
 
 .nav-wrapper {
-    height:100%;
+    min-height:500px;
     padding:var(--mpd);
     background-color: var(--sac);
     grid-column: 1;
@@ -198,13 +219,15 @@ div.nav-main {
     margin-right: var(--mpd);
 }
 
-.task-icon {
+.task-icon, .list-icon {
     padding: 4px;
     width:var(--sis);
     filter:invert(0.2);
     border-radius: var(--brdr);
     border: 2px solid var(--ptc);
 }
+
+.list-icon
 
 .nav-title {
     width: calc(100% - (var(--sis) + var(--mpd)));
@@ -217,19 +240,28 @@ div.nav-main {
     grid-template-columns: 1fr;
     grid-template-rows: 150px minmax(300px, 80vh);
     gap:var(--spd);
-    justify-items: stretch;
+
 }
 
 .list-wrapper {
     background-color: var(--pac);
     grid-template-rows: repeat(auto-fit, 200px);
+    grid-auto-rows: 200px;
     grid-template-columns: repeat(auto-fit, minmax(10%, 300px));
     gap:var(--spd);
 }
 
+.card.flex {
+    flex-direction: column;
+}
+
+.grid.list-wrapper .card{
+    background-color: #fff;
+}
+
 .task-container {
     background-color: var(--pbgc);
-    max-height:80%;
+    max-height:75%;
     margin-top: var(--spd);
     flex-direction: column;
     gap: var(--spd);
