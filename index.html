@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="grid main-container">
+        <div class="nav-wrapper">
+            <div class="flex fc nav-item nav-main xfnt">To-do List</div>
+            <div class="nav-item clickable" id="home">
+                <img src="f8c7c536d6f704fbe961.svg" alt="Home icon" class="nav-icon c-invert" draggable="false"
+                ><p class="nav-title c-invert xfnt">Home</p>
+            </div>
+            <div class="nav-item clickable" id="lists">
+                <img src="753515eaa321610ab642.svg" alt="List icon" class="nav-icon c-invert" draggable="false"
+                ><p class="nav-title c-invert xfnt">My Lists</p>
+            </div>
+        </div>
+        <div class="content-wrapper grid">
+        <div class="card grid list-wrapper hidden"></div>
+        <div class="card"> 
+            <h2 class="list-title">Your Lists</h2>
+            <form action="" method="post" id="list-form">
+                <label for="listName">List Name</label>
+                <input type="text" name="listName" id="listName" placeholder="Do the dishes" autocomplete="off" required/>
+                <h4 class="clickable buttonDiv" id="addListBtn">+</h4>
+            </form>
+        </div>
+        <div class="card grid list-wrapper">
+            <div class="clickable list card flex fc">
+                <h3 class="list-title">List title</h3>
+                <form action="" method="post" class="" id="edit-list-form">
+                    <label for="editListName">List Name</label>
+                    <input type="text" name="editListName" id="editListName" value="My List" autocomplete="off" required/>
+                    <h4 class="clickable buttonDiv" id="editListBtn">Confirm</h4>
+                </form>
+                <div class="list-options">
+                    <img src="8421b7fc701a0f1a93be.svg" alt="Edit icon" class="clickable edit list-icon" draggable="false"
+                    ><img src="bcf8d6ff346603c8a51a.svg" alt="Delete icon" class="clickable delete list-icon" draggable="false">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
