@@ -9,137 +9,37 @@
     <div class="grid main-container">
         <div class="nav-wrapper">
             <div class="flex fc nav-item nav-main xfnt">To-do List</div>
-            <div class="nav-item clickable">
+            <div class="nav-item clickable" id="home">
                 <img src="../public/icons/home.svg" alt="Home icon" class="nav-icon c-invert" draggable="false"
                 ><p class="nav-title c-invert xfnt">Home</p>
             </div>
-            <div class="nav-item clickable">
+            <div class="nav-item clickable" id="lists">
                 <img src="../public/icons/list.svg" alt="List icon" class="nav-icon c-invert" draggable="false"
                 ><p class="nav-title c-invert xfnt">My Lists</p>
             </div>
         </div>
         <div class="content-wrapper grid">
-            <div class="card">
-                <h1 class="home-title">Welcome, Gaberoll!</h1>
-            </div>
-            <div class="card">     
-                <h1 class="task-title">Default List</h1>
-                <h4 class="clickable buttonDiv">+</h4>
-                <form action="" method="post" class="card task-form" id="task-form">
-                    <label for="taskName">Task Name</label>
-                    <input type="text" name="taskName" id="taskName" placeholder="Do the dishes" required/>
-                    <label for="taskDescription">Task Descrption</label>
-                    <input type="text" name="taskDescription" id="taskDescription"/>
-                    <label for="taskDate">Due Date</label>
-                    <input type="date" name="taskDate" id="taskDate">
+        <div class="card grid list-wrapper hidden"></div>
+        <div class="card"> 
+            <h2 class="list-title">Your Lists</h2>
+            <form action="" method="post" id="list-form">
+                <label for="listName">List Name</label>
+                <input type="text" name="listName" id="listName" placeholder="Do the dishes" autocomplete="off" required/>
+                <h4 class="clickable buttonDiv" id="addListBtn">+</h4>
+            </form>
+        </div>
+        <div class="card grid list-wrapper">
+            <div class="clickable list card flex fc">
+                <h3 class="list-title">List title</h3>
+                <form action="" method="post" class="" id="edit-list-form">
+                    <label for="editListName">List Name</label>
+                    <input type="text" name="editListName" id="editListName" value="My List" autocomplete="off" required/>
+                    <h4 class="clickable buttonDiv" id="editListBtn">Confirm</h4>
                 </form>
-                <div class="flex task-container card">
-                    <div class="task card hover-box phigh">
-                        <div class="task-details">
-                            <h4 class="task-title">Task: Self Love</h4>
-                            <div class="task-description"><b>Description: </b>Make sure to smile</div>
-                            <div class="due-date"><b>Due Date: </b>Month / Day / Year</div>
-                            <div class="priority"><b>Priority: </b>High</div>
-                        </div>
-                        <div class="task-options">
-                            <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit task-icon" draggable="false"
-                            ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete task-icon" draggable="false">
-                        </div>
-                    </div>
-                    <div class="task card hover-box pmod">
-                        <div class="task-details">
-                            <h4 class="task-title">Task: Self Love</h4>
-                            <div class="task-description"><b>Description: </b>Make sure to smile</div>
-                            <div class="due-date"><b>Due Date: </b>Month / Day / Year</div>
-                            <div class="priority"><b>Priority: </b>High</div>
-                        </div>
-                        <div class="task-options">
-                            <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit task-icon" draggable="false"
-                            ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete task-icon" draggable="false">
-                        </div>
-                    </div>
-                    <div class="task card hover-box plow">
-                        <div class="task-details">
-                            <h4 class="task-title">Task: Self Love</h4>
-                            <div class="task-description"><b>Description: </b>Make sure to smile</div>
-                            <div class="due-date"><b>Due Date: </b>Month / Day / Year</div>
-                            <div class="priority"><b>Priority: </b>High</div>
-                        </div>
-                        <div class="task-options">
-                            <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit task-icon" draggable="false"
-                            ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete task-icon" draggable="false">
-                        </div>
-                    </div>
-                    <div class="task card hover-box plow">
-                        <div class="task-details">
-                            <h4 class="task-title">Task: Self Love</h4>
-                            <div class="task-description"><b>Description: </b>Make sure to smile</div>
-                            <div class="due-date"><b>Due Date: </b>Month / Day / Year</div>
-                            <div class="priority"><b>Priority: </b>High</div>
-                        </div>
-                        <div class="task-options">
-                            <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit task-icon" draggable="false"
-                            ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete task-icon" draggable="false">
-                        </div>
-                    </div>
-                    <div class="task card hover-box plow">
-                        <div class="task-details">
-                            <h4 class="task-title">Task: Self Love</h4>
-                            <div class="task-description"><b>Description: </b>Make sure to smile</div>
-                            <div class="due-date"><b>Due Date: </b>Month / Day / Year</div>
-                            <div class="priority"><b>Priority: </b>High</div>
-                        </div>
-                        <div class="task-options">
-                            <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit task-icon" draggable="false"
-                            ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete task-icon" draggable="false">
-                        </div>
-                    </div>
-                
- 
-            <!-- Home tab HTML
-            <div class="card">
-                <h1 class="home-title">Welcome, Gaberoll!</h1>
-            </div>
-            <div class="card">
-                <h2 class="home-title">Home</h2>
-                <h3 class="cfnt">Conquer the day,<br>organize your life,<br>stoke your motivation!</h3>
-                <div class="cfnt home-icon">️‍🔥</divd>
-            </div> -->
-
-                <!-- HTML for Lists Page
-                <div class="card">
-                <h2 class="list-title">Your Lists</h2>
-                <h4 class="clickable card buttonDiv" id="addListBtn">New List</h4>
-                <div class="card grid list-wrapper">
-                    <div class="clickable list card flex fc">
-                        <h3 class="list-title">List title</h3>
-                        <div class="list-options">
-                            <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit list-icon" draggable="false"
-                            ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete list-icon" draggable="false">
-                        </div>
-                    </div>
-                    <div class="clickable list card flex fc">
-                        <h3 class="list-title">List title</h3>
-                        <div class="list-options">
-                            <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit list-icon" draggable="false"
-                            ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete list-icon" draggable="false">
-                        </div>
-                    </div>
-                    <div class="clickable list card flex fc">
-                        <h3 class="list-title">List title</h3>
-                        <div class="list-options">
-                            <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit list-icon" draggable="false"
-                            ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete list-icon" draggable="false">
-                        </div>
-                    </div>
-                    <div class="clickable list card flex fc">
-                        <h3 class="list-title">List title</h3>
-                        <div class="list-options">
-                            <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit list-icon" draggable="false"
-                            ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete list-icon" draggable="false">
-                        </div>
-                    </div>
-                </div>-->
+                <div class="list-options">
+                    <img src="../public/icons/edit.svg" alt="Edit icon" class="clickable edit list-icon" draggable="false"
+                    ><img src="../public/icons/delete.svg" alt="Delete icon" class="clickable delete list-icon" draggable="false">
+                </div>
             </div>
         </div>
     </div>
