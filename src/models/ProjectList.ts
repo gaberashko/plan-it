@@ -34,12 +34,13 @@ class ProjectList {
 
     public addProject(): void {
         let titleInput = document.querySelector("#listName") as HTMLInputElement;
+        if (titleInput.value.trim() !== "") {
+            let project: Project = new Project(titleInput.value, [], this.save);
+            this.projects.push(project);
+            this.save();
 
-        let project: Project = new Project(titleInput.value, [], this.save);
-        this.projects.push(project);
-        this.save();
-
-        this.displayProjects();
+            this.displayProjects();
+        }
     };
 
     private editProject(index: number): void {

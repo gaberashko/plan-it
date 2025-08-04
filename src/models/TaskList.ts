@@ -28,11 +28,12 @@ class TaskList {
             priorityInput.value
         );
 
-        this.tasks.push(task);
-
-        // Save project list details, then display current task list.
-        this.onUpdate();
-        this.displayTasks();
+        if (Object.values(task).every(value => value.trim() !== "")) {
+            this.tasks.push(task);
+            // Save project list details, then display current task list.
+            this.onUpdate();
+            this.displayTasks();
+        }
     };
 
     private editTask(index: number): void {
