@@ -1,0 +1,259 @@
+@use "./base/reset";
+@use "./base/globals";
+@use "./abstracts/variables" as *;
+@use "./abstracts/placeholders" as phs;
+
+[class$="-icon"] {
+    @extend %rounded;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display:flex;
+}
+
+.fc {
+    align-items: center;
+}
+
+.c-invert {
+    filter:invert(1);
+}
+
+.hidden {
+    display: none;
+}
+
+.xfnt {
+    font-weight: bold;
+    font-size: $xftnts;
+}
+
+.cfnt {
+    text-align: center;
+}
+
+.home-icon {
+    user-select: none;
+    margin-top: $spd;
+    font-size:5rem;
+}
+
+#home-card {
+    background-color: transparent;
+    box-shadow: none;
+
+    > :nth-child(n+2) {
+        position: relative;
+        bottom:$lpd
+    }
+}
+
+.clickable {
+    cursor:pointer;
+    user-select: none;
+
+    &:hover {
+        filter: brightness(1.05);
+    }
+
+    &:active:not(:has(:active, :focus)) {
+        filter:brightness(.95);
+        transform: scale(.98);
+    }
+}
+
+.list {
+    min-height:150px;
+
+    &-title {
+        margin-bottom: 8px;
+    }
+}
+
+.card {
+    @extend %rounded;
+
+    background-color: $pc;
+    padding: $spd;
+
+    &.task {
+        min-height:max-content;
+        flex:none;
+    }
+
+    &.flex {
+        flex-direction: column;
+    }
+
+    &.clickable {
+        user-select: none;
+    }
+}
+
+
+.buttonDiv {
+    @extend %rounded;
+
+    margin: $spd $spd $spd;
+    text-align: center;
+    width: 100px;
+    background-color: $pc;
+    border-bottom: 3px solid $sach;
+}
+
+.edit {
+    margin-right: $spd;
+
+    &:active {
+        background-color: $pac;
+    }
+}
+
+#edit-list-form {
+    margin-bottom: $mpd;
+}
+
+.delete:active {
+    background-color: $delete;
+}
+
+.main-container {
+    min-height:100vh;
+    max-width: $pcmaxw;
+    grid-template-columns: 200px minmax(800px, 7fr);
+}
+
+.nav-wrapper {
+    min-height:100vh;
+    padding: $spd;
+    background-color: $sac;
+    background:linear-gradient($sac 45%, transparent);
+    box-shadow: $stdshad;
+    grid-column: 1;
+
+    .nav-item {
+        @extend %rounded;
+
+        padding: $spd;
+        background-color: $sac;
+
+        & > * {
+            color: #000;
+            display: inline-block;
+            vertical-align: middle;
+            user-select: none;
+        }
+
+        &:active:not(.nav-main) {
+            filter: brightness(.95);
+            transform: scale(.98);
+        }
+    }
+
+    .nav-main {
+        color:#000;
+        height:90px;
+        background-color: $pc;
+        border-bottom: 5px solid $sach;
+        margin-bottom: $lpd;
+        user-select: none;
+    }
+
+    .nav-icon {
+        width: $sis;
+        margin-right: $spd;
+    }
+
+    .nav-title {
+        width: calc(100% - ($sis + $spd));
+        text-align: left;
+    }
+}
+
+.task-icon, .list-icon {
+    padding: 4px;
+    width: $sis;
+    filter: invert(0.2);
+    border: 2px solid $ptc;
+}
+
+.content-wrapper {
+    overflow:visible;
+    height:100%;
+    padding: $spd;
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content 1fr;
+    gap: $spd;
+    align-content: start;
+}
+
+.list-wrapper {
+    height: fit-content;
+    background-color: $pac;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: $spd;
+}
+
+.content-wrapper > .card:last-child {
+    height:100%;
+    justify-self:stretch;
+}
+
+.grid.list-wrapper .card{
+    background-color: #fff;
+}
+
+.task-container {
+    height:67vh;
+    background-color: $pbgc;
+    margin-top: $spd;
+    flex-direction: column;
+    gap: $spd;
+    overflow-y:scroll;
+    
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @extend %rounded;
+
+        background-color: $sach;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $pc;
+    }
+}
+
+.task-options {
+    margin-top: $spd;
+}
+
+.hover-box {
+    transition: all 0.3s;
+    transform-origin:center center;
+    box-shadow: 0 0px 0px rgba(0,0,0,0);
+
+    &:hover {
+        transform:scale(1, 1.02) translate(-5px, -5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.phigh {
+    border-left: $pbrdr solid $phighc;
+}
+
+.pmod {
+    border-left: $pbrdr solid $pmodc;
+}
+
+.plow {
+    border-left: $pbrdr solid $plowc;
+}

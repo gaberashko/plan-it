@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/placeholders" as phs;
+
+html {
+    background: url(../../public/background-waves.svg) no-repeat local;
+    background-size: cover;
+    background-position: 0px;
+    min-width:fit-content;
+}
+
+h1, h2, h3, h4 {
+    @extend %heading-base;
+}
+
+h1 {
+   @extend %heading-box;
+    font-size:2.4rem;
+    margin-top:17px;
+    margin-bottom:auto;
+}
+
+h2 {
+    @extend %heading-box;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid $pbgc;
+}
+
+h4 {
+    font-size:1.4rem;
+}
+
+label {
+    display: block;
+    font-size: $sftnts;
+}
+
+input {
+    margin-right: $spd;
+
+    &[type="text"], &[type="date"] {
+        @extend %rounded;
+
+        padding: $spd;
+        border: 1px solid $itc;
+        width: 150px;
+
+        &:focus {
+            filter: brightness(.98);
+            border: 1px solid black;
+        }
+    }
+}
+
+form {
+    text-wrap: nowrap;
+
+    & > * {
+        display: inline-block;
+    }
+}
+
+select {
+    @extend %rounded;
+
+    background-color: white;
+    padding: $spd;
+}

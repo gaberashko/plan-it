@@ -1,4 +1,3 @@
-
 export default `<div class="card"> 
                     <h2 class="list-title">Your Lists</h2>
                     <form action="" method="post" id="list-form">
