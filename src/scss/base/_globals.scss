@@ -2,10 +2,7 @@
 @use "../abstracts/placeholders" as phs;
 
 html {
-    background: url(../../public/background-waves.svg) no-repeat local;
-    background-size: cover;
-    background-position: 0px;
-    min-width:fit-content;
+    overflow-y:auto;
 }
 
 h1, h2, h3, h4 {

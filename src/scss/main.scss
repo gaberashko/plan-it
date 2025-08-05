@@ -7,6 +7,37 @@
     @extend %rounded;
 }
 
+.background-container {
+    min-width:1270px;
+    min-height:515px;
+    width:107.8%;
+    height:100vh;
+    left:-100px;
+    position: absolute;
+    overflow: hidden;
+    z-index:-1;
+}
+
+#visual1, #visual2 {
+    position: absolute;
+    left:-10000%; right: -10000%; 
+    top: -9992%; bottom: -10000%;
+    margin: auto auto;
+    max-width: 10%;
+    max-height: 10%;
+    -webkit-transform:scale(12);
+    transform: scale(12);
+}
+
+#wave1, #wave1-target {
+    position:absolute;
+    transform: translateY(8px);
+}
+
+#visual2 {
+    display: none;
+}
+
 .grid {
     display: grid;
 }
@@ -122,13 +153,13 @@
 }
 
 .main-container {
-    min-height:100vh;
+    height:100vh;
     max-width: $pcmaxw;
     grid-template-columns: 200px minmax(800px, 7fr);
 }
 
 .nav-wrapper {
-    min-height:100vh;
+    min-height:514px;
     padding: $spd;
     background-color: $sac;
     background:linear-gradient($sac 45%, transparent);

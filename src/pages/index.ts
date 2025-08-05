@@ -1,5 +1,32 @@
 import("../scss/main.css");
 import { ProjectList } from "models/ProjectList";
+import gsap from 'gsap';
+import MorphSVGPlugin from "gsap/MorphSVGPlugin";
+
+// Initiate background animation with GSAP library.
+gsap.registerPlugin(MorphSVGPlugin);
+
+const waves = [
+    {start: "#wave1", end: "#wave1-target"},
+    {start: "#wave2", end: "#wave2-target"},
+    {start: "#wave3", end: "#wave3-target"},
+    {start: "#wave4", end: "#wave4-target"},
+]
+
+let i = 1;
+waves.forEach(({ start, end }) => {
+    gsap.to(start, {
+        duration: (3+(1*i)),
+        morphSVG: {
+            shape:end,
+            shapeIndex:-1,},
+        ease: "back.inOut",
+        repeat: -1,
+        repeatDelay: 1/i,
+        yoyo: true,
+    });
+    ++i;
+});
 
 const pages: Record<string, () => Promise<any>> = {
     home: () => import("./home"),
