@@ -1,4 +1,4 @@
-# Plan-It!
+# :notebook_with_decorative_cover: Plan-It! :milky_way:
 
 <p align="center">
     <img src="public/images/website-menu.png" width=75%>
@@ -7,7 +7,7 @@
 ## Table of Contents
 
 -   [About](#about)
--   [Website Demo](#website-demo)
+-   [Installation / Website Demo](#installation--website-demo)
 -   [Features](#features)
 -   [Tech Stack](#tech-stack)
 
@@ -17,7 +17,7 @@ Plan-It! is a web-based activity logger created using HTML5/CSS3/JavaScript (ES6
 
 <img src="public/images/website-image-1.png">
 
-## Website Demo / Installation
+## Installation / Website Demo
 
 The website is hosted on GitHub Pages, and can be accessed below:
 
@@ -44,12 +44,12 @@ Otherwise, the project's functionality can be tested through the following steps
 
 ## Tech Stack
 
--   **HTML5 / CSS3 / JavaScript (ES6+)** - Languages used for initial website architecture.
--   **TypeScript** - Refactored JavaScript to adhere to industry-standard code quality via static typing.
--   **SCSS** - Refactored CSS with greater emphasis on modularity.
--   **Webpack** - For module bundling and asset management.
--   **localStorage API** - Used to handle persistent client-side data.
--   **GSAP** - Background animation with MorphSVG.
+-   🛠️ **HTML5 / CSS3 / JavaScript (ES6+)** - Languages used for initial website architecture.
+-   ⚙️ **TypeScript** - Refactored JavaScript to adhere to industry-standard code quality via static typing.
+-   🎨 **SCSS** - Refactored CSS with greater emphasis on modularity.
+-   🧱 **Webpack** - For module bundling and asset management.
+-   💾 **localStorage API** - Used to handle persistent client-side data.
+-   ✨ **GSAP** - Background animation with MorphSVG.
 
 ### Enjoy! :white_check_mark:
 
