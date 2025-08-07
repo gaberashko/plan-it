@@ -6,7 +6,7 @@ const deleteIcon = require("../../public/icons/delete.svg") as string;
 // onUpdate is callback function for changes in tasks (saving details in project list structure).
 class TaskList {
 
-    public constructor(private tasks: Task[] = [], private onUpdate: () => void) {}
+    public constructor(private tasks: Task[] = [], private onUpdate: () => void = () => {}) {}
 
     public removeTask(index: number): void {
         this.tasks.splice(index, 1);
