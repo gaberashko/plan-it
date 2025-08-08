@@ -27,7 +27,7 @@ Otherwise, the project's functionality can be tested through the following steps
 
 1. Download the repository.
 2. Extract the repository.
-3. Open the folder in VSCode, and run `npm install`
+3. Open the folder in VSCode, and run `npm install`.
 4. Then, run `npx webpack serve`.
 5. Locate the `http://localhost:8080/` output in the terminal.
 6. Hold <kbd>Ctrl</kbd> and click on `http://localhost:8080/`, and the hosted deployment version will open.
