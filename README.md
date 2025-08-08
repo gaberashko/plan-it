@@ -21,7 +21,7 @@ Plan-It! is a web-based activity logger created using HTML5/CSS3/JavaScript (ES6
 
 The website is hosted on GitHub Pages, and can be accessed below:
 
-[Plan-It!](https://gaberashko.github.io/todo-list/#home)
+[Plan-It!](https://gaberashko.github.io/plan-it/#home)
 
 Otherwise, the project's functionality can be tested through the following steps:
 
