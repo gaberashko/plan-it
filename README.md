@@ -50,6 +50,7 @@ Otherwise, the project's functionality can be tested through the following steps
 -   🧱 **Webpack** - For module bundling and asset management.
 -   💾 **localStorage API** - Used to handle persistent client-side data.
 -   ✨ **GSAP** - Background animation with MorphSVG.
+-   🚩 **Jest** - Unit testing of modular components.
 
 ### Enjoy! :white_check_mark:
 
