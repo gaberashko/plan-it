@@ -1,5 +1,5 @@
 export default `            <div class="card">
-                <h1 class="home-title">Welcome, Gaberoll!</h1>
+                <h1 class="home-title">Welcome!</h1>
             </div>
             <div class="card" id="home-card">
                 <h2 class="home-title">Home</h2>
