@@ -1,5 +1,5 @@
 export default `<div class="card"> 
-                    <h2 class="list-title">Your Lists</h2>
+                    <h2 class="">Your Lists</h2>
                     <form action="" method="post" id="list-form">
                         <label for="listName">List Name</label>
                         <input type="text" name="listName" id="listName" placeholder="New Year's Resolutions" autocomplete="off" required/>

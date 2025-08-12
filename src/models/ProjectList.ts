@@ -1,3 +1,5 @@
+const  MOBILE_BREAKPOINT: number = 1270;
+
 // ProjectList.js
 import { Project } from "./Project";
 import { Task } from "./Task";
@@ -95,6 +97,8 @@ class ProjectList {
             projectContainer.appendChild(projectCard);
 
             projectCard.addEventListener("click", (event: MouseEvent) => {
+                const viewportWidth: number = window.innerWidth;
+
                 const target = event.target as HTMLElement | null;
                 if (target) {
                     let action: string = target.dataset.action!;
@@ -119,8 +123,31 @@ class ProjectList {
                         case "input":
                             break;
                         default:
-                            contentContainer.innerHTML = `<div class="card">     
-                                <h1 class="task-title">${title}</h1>
+                            contentContainer.innerHTML = (viewportWidth <= MOBILE_BREAKPOINT) ? `
+                                <div class="card">     
+                                    <h1 class="list-title">${title}</h1>
+                                    <form action="" method="post" id="task-form">
+                                        <div class="form-group">
+                                            <label for="taskName">Task Name</label>
+                                            <input type="text" name="taskName" id="taskName" placeholder="Do the dishes" autocomplete="off" required/>
+                                            <label for="taskDescription">Task Description</label>
+                                            <input type="text" name="taskDescription" id="taskDescription" autocomplete="off"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="taskDate">Due Date</label>
+                                            <input type="date" name="taskDate" id="taskDate" autocomplete="off">
+                                            <label for="taskPriority">Priority</label>
+                                            <select name="priority" id="priority">
+                                                <option value="high">High</option>
+                                                <option value="mod">Medium</option>
+                                                <option value="low">Low</option>
+                                            </select>
+                                        </div>
+                                        <h4 class="clickable buttonDiv" id="addTaskBtn${index}">+</h4>
+                                    </form>
+                                <div class="flex task-container card"></div>` 
+                            : `<div class="card">     
+                                <h1 class="list-title">${title}</h1>
                                 <form action="" method="post" id="task-form">
                                 <label for="taskName">Task Name</label>
                                 <input type="text" name="taskName" id="taskName" placeholder="Do the dishes" autocomplete="off" required/>

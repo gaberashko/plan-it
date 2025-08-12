@@ -2,28 +2,41 @@
 @use "./base/globals";
 @use "./abstracts/variables" as *;
 @use "./abstracts/placeholders" as phs;
+@use "./abstracts/mixins";
 
 [class$="-icon"] {
     @extend %rounded;
 }
+.bc-wrapper {
+    height:100vh;
+    width:100%;
+    position:absolute;
+    overflow: hidden;
+    pointer-events: none;
+}
 
 .background-container {
-    min-width:1270px;
     min-height:515px;
     width:107.8%;
     height:100vh;
-    left:-100px;
+    left:-50px;
     position: absolute;
     overflow: hidden;
     z-index:-1;
+
+    @include mixins.responsive("handheld") {
+        min-width:0;
+        width: 100%;
+        left:0;
+    }
 }
 
 #visual1, #visual2 {
     position: absolute;
-    left:-10000%; right: -10000%; 
+    left:-9960%; right: -10000%; 
     top: -9992%; bottom: -10000%;
     margin: auto auto;
-    max-width: 10%;
+    max-width: 30%;
     max-height: 10%;
     -webkit-transform:scale(12);
     transform: scale(12);
@@ -61,6 +74,10 @@
 .xfnt {
     font-weight: bold;
     font-size: $xftnts;
+
+    @include mixins.responsive("handheld") {
+        font-size: $xftnts;
+    }
 }
 
 .cfnt {
@@ -73,13 +90,26 @@
     font-size:5rem;
 }
 
+#welcome-card {
+    @include mixins.responsive("handheld") {
+        display: none;
+    }
+}
+
 #home-card {
     background-color: transparent;
     box-shadow: none;
 
     > :nth-child(n+2) {
         position: relative;
-        bottom:$lpd
+        bottom:$lpd;
+
+        @include mixins.responsive("handheld") {
+            bottom:0;
+        }
+    }
+
+    @include mixins.responsive("handheld") {
     }
 }
 
@@ -99,9 +129,12 @@
 
 .list {
     min-height:150px;
-
     &-title {
-        margin-bottom: 8px;
+        margin: 8px 0;
+        max-width:100%;
+        text-align:center;
+        overflow:hidden;
+        text-overflow: ellipsis;
     }
 }
 
@@ -110,7 +143,6 @@
 
     background-color: $pc;
     padding: $spd;
-
     &.task {
         min-height:max-content;
         flex:none;
@@ -123,6 +155,10 @@
     &.clickable {
         user-select: none;
     }
+
+    @include mixins.responsive("handheld") {
+        max-width:100%;
+    }
 }
 
 
@@ -134,6 +170,10 @@
     width: 100px;
     background-color: $pc;
     border-bottom: 3px solid $sach;
+
+    @include mixins.responsive("handheld") {
+        margin: 0;
+    }
 }
 
 .edit {
@@ -156,6 +196,14 @@
     height:100vh;
     max-width: $pcmaxw;
     grid-template-columns: 200px minmax(800px, 7fr);
+
+    @include mixins.responsive("handheld") {
+        max-height:100%;
+        width:100%;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 170px 1fr;
+    }
 }
 
 .nav-wrapper {
@@ -165,6 +213,23 @@
     background:linear-gradient($sac 45%, transparent);
     box-shadow: $stdshad;
     grid-column: 1;
+
+    @include mixins.responsive("handheld") {
+        min-height: 170px;
+        background: none;
+        background-color: $sac;
+    }
+
+    .nav-item-wrapper {
+        @include mixins.responsive("handheld") {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            & > * {
+                flex: none;
+            }
+        }
+    }
 
     .nav-item {
         @extend %rounded;
@@ -183,8 +248,14 @@
             filter: brightness(.95);
             transform: scale(.98);
         }
-    }
 
+        @include mixins.responsive("handheld") {
+            &:not(.nav-main) {
+                display: inline-block;
+            }
+        }
+    }
+    
     .nav-main {
         color:#000;
         height:90px;
@@ -192,16 +263,29 @@
         border-bottom: 5px solid $sach;
         margin-bottom: $lpd;
         user-select: none;
+
+        @include mixins.responsive("handheld") {
+            justify-content: center;
+            margin-bottom: $spd;
+        }
     }
 
     .nav-icon {
         width: $sis;
         margin-right: $spd;
+
+        @include mixins.responsive("handheld") {
+            display: none;
+        }
     }
 
     .nav-title {
         width: calc(100% - ($sis + $spd));
         text-align: left;
+        
+        @include mixins.responsive("handheld") {
+            width:100%;
+        }
     }
 }
 
@@ -213,19 +297,19 @@
 }
 
 .content-wrapper {
-    overflow:visible;
-    height:100%;
     padding: $spd;
     grid-template-columns: 1fr;
     grid-template-rows: fit-content 1fr;
     gap: $spd;
     align-content: start;
+    overflow-y:auto;
+    scrollbar-width:none;
 }
 
 .list-wrapper {
     height: fit-content;
     background-color: $pac;
-    grid-template-rows: auto;
+    grid-auto-rows: max-content;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: $spd;
 }
@@ -243,10 +327,9 @@
     height:67vh;
     background-color: $pbgc;
     margin-top: $spd;
-    flex-direction: column;
     gap: $spd;
     overflow-y:scroll;
-    
+
     &::-webkit-scrollbar {
         width: 6px;
     }
@@ -260,6 +343,23 @@
     &::-webkit-scrollbar-track {
         background-color: $pc;
     }
+
+    @include mixins.responsive("handheld") {
+        height:auto;
+    }
+}
+
+#task-form {
+    @include mixins.responsive("handheld") {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+}
+
+.form-group {
+    width: 100%;
 }
 
 .task-options {

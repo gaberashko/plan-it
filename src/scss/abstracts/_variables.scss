@@ -37,8 +37,13 @@ $lpd: 64px;                  // Large padding/margin
 
 $sis: 40px;                  // Standard icon size
 
-$sftnts: 1.1rem;             // Standard font size
-$xftnts: 1.6rem;             // Large font size
+$sftnts: 1.1rem;             // Standard font size (DESKTOP)
+$xftnts: 1.6rem;             // Large font size (DESKTOP)
+
+$msftnts: 1rem;               // Standard font size (HANDHELD)
+$mxftnts: 1.4rem;             // Large font size (HANDHELD)
 
 $pbrdr: 8px;                 // Primary border width
 $pcmaxw: 1920px;             // Page/container max width
+
+$breakpoints: ("handheld": 1270px)

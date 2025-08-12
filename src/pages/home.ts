@@ -1,4 +1,4 @@
-export default `            <div class="card">
+export default `            <div class="card" id="welcome-card">
                 <h1 class="home-title">Welcome!</h1>
             </div>
             <div class="card" id="home-card">
