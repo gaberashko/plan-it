@@ -195,7 +195,7 @@
 .main-container {
     height:100vh;
     max-width: $pcmaxw;
-    grid-template-columns: 200px minmax(800px, 7fr);
+    grid-template-columns: 200px minmax(700px, 7fr);
 
     @include mixins.responsive("handheld") {
         max-height:100%;
@@ -207,7 +207,6 @@
 }
 
 .nav-wrapper {
-    min-height:514px;
     padding: $spd;
     background-color: $sac;
     background:linear-gradient($sac 45%, transparent);

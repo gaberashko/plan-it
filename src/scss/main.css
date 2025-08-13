@@ -12,23 +12,11 @@
   background-color: rgba(177, 105, 250, 0.2352941176);
 }
 
-[class$="-icon"],
-.card,
-.buttonDiv,
-.nav-wrapper .nav-item,
-.task-container::-webkit-scrollbar-thumb,
-input[type="text"],
-input[type="date"],
-select,
-h1,
-h2 {
+[class$=-icon], .card, .buttonDiv, .nav-wrapper .nav-item, .task-container::-webkit-scrollbar-thumb, input[type=text], input[type=date], select, h1, h2 {
   border-radius: 12px;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: inherit;
   font-weight: bold;
   margin: 0 auto;
@@ -36,8 +24,7 @@ h4 {
   width: fit-content;
 }
 
-h1,
-h2 {
+h1, h2 {
   padding: 8px;
   margin: 8px;
   border-left: 5px solid rgba(177, 105, 250, 0.2352941176);
@@ -101,14 +88,12 @@ label {
 input {
   margin-right: 8px;
 }
-input[type="text"],
-input[type="date"] {
+input[type=text], input[type=date] {
   padding: 8px;
   border: 1px solid #e3e1ec;
   width: 150px;
 }
-input[type="text"]:focus,
-input[type="date"]:focus {
+input[type=text]:focus, input[type=date]:focus {
   filter: brightness(0.98);
   border: 1px solid black;
 }
@@ -147,8 +132,7 @@ select {
   }
 }
 
-#visual1,
-#visual2 {
+#visual1, #visual2 {
   position: absolute;
   left: -9960%;
   right: -10000%;
@@ -161,8 +145,7 @@ select {
   transform: scale(12);
 }
 
-#wave1,
-#wave1-target {
+#wave1, #wave1-target {
   position: absolute;
   transform: translateY(8px);
 }
@@ -221,12 +204,12 @@ select {
   background-color: transparent;
   box-shadow: none;
 }
-#home-card > :nth-child(n + 2) {
+#home-card > :nth-child(n+2) {
   position: relative;
   bottom: 64px;
 }
 @media only screen and (max-width: 975px) {
-  #home-card > :nth-child(n + 2) {
+  #home-card > :nth-child(n+2) {
     bottom: 0;
   }
 }
@@ -304,7 +287,7 @@ select {
 .main-container {
   height: 100vh;
   max-width: 1920px;
-  grid-template-columns: 200px minmax(800px, 7fr);
+  grid-template-columns: 200px minmax(700px, 7fr);
 }
 @media only screen and (max-width: 975px) {
   .main-container {
@@ -317,7 +300,6 @@ select {
 }
 
 .nav-wrapper {
-  min-height: 514px;
   padding: 8px;
   background-color: #b169fa;
   background: linear-gradient(#b169fa 45%, transparent);
@@ -393,8 +375,7 @@ select {
   }
 }
 
-.task-icon,
-.list-icon {
+.task-icon, .list-icon {
   padding: 4px;
   width: 40px;
   filter: invert(0.2);
@@ -492,4 +473,4 @@ select {
 
 .plow {
   border-left: 8px solid #f0b3e1;
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
