@@ -12,11 +12,23 @@
   background-color: rgba(177, 105, 250, 0.2352941176);
 }
 
-[class$=-icon], .card, .buttonDiv, .nav-wrapper .nav-item, .task-container::-webkit-scrollbar-thumb, input[type=text], input[type=date], select, h1, h2 {
+[class$="-icon"],
+.card,
+.buttonDiv,
+.nav-wrapper .nav-item,
+.task-container::-webkit-scrollbar-thumb,
+input[type="text"],
+input[type="date"],
+select,
+h1,
+h2 {
   border-radius: 12px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: inherit;
   font-weight: bold;
   margin: 0 auto;
@@ -24,7 +36,8 @@ h1, h2, h3, h4 {
   width: fit-content;
 }
 
-h1, h2 {
+h1,
+h2 {
   padding: 8px;
   margin: 8px;
   border-left: 5px solid rgba(177, 105, 250, 0.2352941176);
@@ -40,7 +53,7 @@ h1 {
   margin-top: 17px;
   margin-bottom: auto;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   h1 {
     font-size: 2rem;
     margin-top: 0;
@@ -50,7 +63,7 @@ h1 {
 h2 {
   font-size: 2rem;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   h2 {
     font-size: 1.6rem;
   }
@@ -60,7 +73,7 @@ h3 {
   font-size: 1.8rem;
   border-bottom: 2px solid #cdc4e0;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   h3 {
     font-size: 1.4rem;
   }
@@ -69,7 +82,7 @@ h3 {
 h4 {
   font-size: 1.4rem;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   h4 {
     font-size: 1rem;
   }
@@ -79,7 +92,7 @@ label {
   display: block;
   font-size: 1.1rem;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   label {
     font-size: 1rem;
   }
@@ -88,19 +101,18 @@ label {
 input {
   margin-right: 8px;
 }
-input[type=text], input[type=date] {
+input[type="text"],
+input[type="date"] {
   padding: 8px;
   border: 1px solid #e3e1ec;
   width: 150px;
 }
-input[type=text]:focus, input[type=date]:focus {
+input[type="text"]:focus,
+input[type="date"]:focus {
   filter: brightness(0.98);
   border: 1px solid black;
 }
 
-form {
-  text-wrap: nowrap;
-}
 form > * {
   display: inline-block;
 }
@@ -127,7 +139,7 @@ select {
   overflow: hidden;
   z-index: -1;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .background-container {
     min-width: 0;
     width: 100%;
@@ -135,7 +147,8 @@ select {
   }
 }
 
-#visual1, #visual2 {
+#visual1,
+#visual2 {
   position: absolute;
   left: -9960%;
   right: -10000%;
@@ -148,7 +161,8 @@ select {
   transform: scale(12);
 }
 
-#wave1, #wave1-target {
+#wave1,
+#wave1-target {
   position: absolute;
   transform: translateY(8px);
 }
@@ -181,7 +195,7 @@ select {
   font-weight: bold;
   font-size: 1.6rem;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .xfnt {
     font-size: 1.6rem;
   }
@@ -197,7 +211,7 @@ select {
   font-size: 5rem;
 }
 
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   #welcome-card {
     display: none;
   }
@@ -207,12 +221,12 @@ select {
   background-color: transparent;
   box-shadow: none;
 }
-#home-card > :nth-child(n+2) {
+#home-card > :nth-child(n + 2) {
   position: relative;
   bottom: 64px;
 }
-@media only screen and (max-width: 1270px) {
-  #home-card > :nth-child(n+2) {
+@media only screen and (max-width: 975px) {
+  #home-card > :nth-child(n + 2) {
     bottom: 0;
   }
 }
@@ -253,7 +267,7 @@ select {
 .card.clickable {
   user-select: none;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .card {
     max-width: 100%;
   }
@@ -266,7 +280,7 @@ select {
   background-color: #f9f8f9;
   border-bottom: 3px solid #825ebd;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .buttonDiv {
     margin: 0;
   }
@@ -292,7 +306,7 @@ select {
   max-width: 1920px;
   grid-template-columns: 200px minmax(800px, 7fr);
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .main-container {
     max-height: 100%;
     width: 100%;
@@ -310,14 +324,14 @@ select {
   box-shadow: 1px 1px 2px rgba(55, 55, 55, 0.8);
   grid-column: 1;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .nav-wrapper {
     min-height: 170px;
     background: none;
     background-color: #b169fa;
   }
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .nav-wrapper .nav-item-wrapper {
     display: flex;
     flex-direction: row;
@@ -341,7 +355,7 @@ select {
   filter: brightness(0.95);
   transform: scale(0.98);
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .nav-wrapper .nav-item:not(.nav-main) {
     display: inline-block;
   }
@@ -354,7 +368,7 @@ select {
   margin-bottom: 64px;
   user-select: none;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .nav-wrapper .nav-main {
     justify-content: center;
     margin-bottom: 8px;
@@ -364,7 +378,7 @@ select {
   width: 40px;
   margin-right: 8px;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .nav-wrapper .nav-icon {
     display: none;
   }
@@ -373,13 +387,14 @@ select {
   width: calc(100% - 48px);
   text-align: left;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .nav-wrapper .nav-title {
     width: 100%;
   }
 }
 
-.task-icon, .list-icon {
+.task-icon,
+.list-icon {
   padding: 4px;
   width: 40px;
   filter: invert(0.2);
@@ -395,6 +410,11 @@ select {
   overflow-y: auto;
   scrollbar-width: none;
 }
+@media only screen and (max-width: 975px) {
+  .content-wrapper {
+    min-width: 0;
+  }
+}
 
 .list-wrapper {
   height: fit-content;
@@ -405,7 +425,7 @@ select {
 }
 
 .content-wrapper > .card:last-child {
-  height: 100%;
+  height: fit-content;
   justify-self: stretch;
 }
 
@@ -429,13 +449,13 @@ select {
 .task-container::-webkit-scrollbar-track {
   background-color: #f9f8f9;
 }
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   .task-container {
     height: auto;
   }
 }
 
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 975px) {
   #task-form {
     display: flex;
     justify-content: space-between;
@@ -472,4 +492,4 @@ select {
 
 .plow {
   border-left: 8px solid #f0b3e1;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

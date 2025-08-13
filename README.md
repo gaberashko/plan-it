@@ -6,10 +6,10 @@
 
 ## Table of Contents
 
--   [About](#about)
--   [Installation / Website Demo](#installation--website-demo)
--   [Features](#features)
--   [Tech Stack](#tech-stack)
+- [About](#about)
+- [Installation / Website Demo](#installation--website-demo)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
 
 ## About
 
@@ -44,13 +44,13 @@ Otherwise, the project's functionality can be tested through the following steps
 
 ## Tech Stack
 
--   🛠️ **HTML5 / CSS3 / JavaScript (ES6+)** - Languages used for initial website architecture.
--   ⚙️ **TypeScript** - Refactored JavaScript to adhere to industry-standard code quality via static typing.
--   🎨 **SCSS** - Refactored CSS with greater emphasis on modularity.
--   🧱 **Webpack** - For module bundling and asset management.
--   💾 **localStorage API** - Used to handle persistent client-side data.
--   ✨ **GSAP** - Background animation with MorphSVG.
--   🚩 **Jest** - Unit testing of modular components.
+- 🛠️ **HTML5 / CSS3 / JavaScript (ES6+)** - Languages used for initial website architecture.
+- ⚙️ **TypeScript** - Refactored JavaScript to adhere to industry-standard code quality via static typing.
+- 🎨 **SCSS** - Refactored CSS with greater emphasis on modularity.
+- 🧱 **Webpack** - For module bundling and asset management.
+- 💾 **localStorage API** - Used to handle persistent client-side data.
+- ✨ **GSAP** - Background animation with MorphSVG.
+- 🚩 **Jest** - Unit testing of modular components.
 
 ### Enjoy! :white_check_mark:
 

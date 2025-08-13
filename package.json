@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "format": "npx prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\""
   },
   "keywords": [],
   "author": "gaberashko",
@@ -15,6 +16,7 @@
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "jest": "^30.0.5",
+    "prettier": "^3.6.2",
     "sass": "^1.89.2",
     "style-loader": "^4.0.0",
     "ts-jest": "^29.4.1",

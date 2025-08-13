@@ -75,8 +75,6 @@ input {
 }
 
 form {
-    text-wrap: nowrap;
-
     & > * {
         display: inline-block;
     }
